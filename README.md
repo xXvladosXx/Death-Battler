@@ -2,6 +2,7 @@
 
 **Death Battler** is a Unity demo project that showcases a cutting-edge Utility AI system designed to be easily modified and extended. This project demonstrates how to integrate a flexible, utility-based AI into games, allowing for dynamic and adaptive enemy behavior.
 
+[Demo](https://xxvladosxx.itch.io/death-battler)
 ![DeathBattler](https://github.com/user-attachments/assets/9c278162-1734-45b1-87d2-6e4620ca9cf6)
 
 ## Key Features
