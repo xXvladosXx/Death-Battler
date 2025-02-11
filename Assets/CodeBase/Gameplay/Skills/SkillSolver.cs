@@ -82,6 +82,16 @@ namespace CodeBase.Gameplay.Skills
       }
     }
 
+    
+    public float CalculateSkillValue(string casterId, SkillTypeId skillTypeId, string targetId)
+    {
+      HeroBehaviour caster = _heroRegistry.GetHero(casterId);
+      SkillKind kind = _staticDataService.HeroSkillFor(skillTypeId, caster.TypeId).Kind;
+      
+      return _appliers.Find(applier => applier.SkillKind == kind)
+        .CalculateSkillValue(casterId, skillTypeId, targetId);
+    }
+
     private void ShowSkillName(string casterId, SkillTypeId skillTypeId)
     {
       HeroBehaviour caster = _heroRegistry.GetHero(casterId);

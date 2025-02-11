@@ -1,4 +1,5 @@
 using CodeBase.Gameplay.Battle;
+using CodeBase.StaticData.Skills;
 
 namespace CodeBase.Gameplay.Skills
 {
@@ -6,5 +7,6 @@ namespace CodeBase.Gameplay.Skills
   {
     void ProcessHeroAction(HeroAction heroAction);
     void SkillDelaysTick();
+    float CalculateSkillValue(string skillCasterId, SkillTypeId skillTypeId, string targetId);
   }
 }

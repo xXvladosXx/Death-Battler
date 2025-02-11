@@ -1,5 +1,6 @@
 using CodeBase.Gameplay.AI;
 using CodeBase.Gameplay.AI.Reporting;
+using CodeBase.Gameplay.AI.UtilityAI;
 using CodeBase.Gameplay.Battle;
 using CodeBase.Gameplay.Cooldowns;
 using CodeBase.Gameplay.Death;
@@ -34,7 +35,7 @@ namespace CodeBase.Infrastructure
       Container.Bind<IDeathService>().To<DeathService>().AsSingle();
       Container.Bind<IInitiativeService>().To<InitiativeService>().AsSingle();
       Container.Bind<ITargetPicker>().To<TargetPicker>().AsSingle();
-      Container.Bind<IArtificialIntelligence>().To<StupidAI>().AsSingle();
+      Container.Bind<IArtificialIntelligence>().To<UtilityAI>().AsSingle();
     }
 
     public void Initialize()

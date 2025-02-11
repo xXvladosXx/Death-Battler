@@ -47,6 +47,15 @@ namespace CodeBase.Gameplay.Skills.SkillAppliers
         PlayFx(target.transform.position);
       }
     }
+    
+    public float CalculateSkillValue(string casterId, SkillTypeId skillTypeId, string targetId)
+    {
+      HeroBehaviour caster = _heroRegistry.GetHero(casterId);
+      HeroBehaviour target = _heroRegistry.GetHero(targetId);
+      HeroSkill skill = _staticDataService.HeroSkillFor(skillTypeId, caster.TypeId);
+      
+      return target.State.MaxInitiative * skill.Value;
+    }
 
     public void WarmUp()
     {
